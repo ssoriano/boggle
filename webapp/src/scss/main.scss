@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+
+/* Variables */
+$font-stack: 'Poppins', sans-serif;
+
+$light: #ffffff;
+$dark: #000000;
+$gray-1: #d8d8d8;
+$gray-2: #e3e3e3;
+$light-gray: #919191;
+$light-gray-2: #979797;
+
+/* Mixins */
+@mixin flex {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+}
+
+@mixin flex-center {
+    @include flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin flex-row {
+    @include flex;
+    flex-direction: row;
+}
+
+@mixin flex-row-start {
+    @include flex-row;
+    justify-content: flex-start;
+}
+
+@mixin flex-row-space-between {
+    @include flex-row;
+    justify-content: space-between;
+}
+
+@mixin flex-row-center {
+    @include flex-row;
+    justify-content: center;
+}
+
+@mixin flex-column {
+    @include flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-start {
+    @include flex-column;
+    justify-content: flex-start;
+}
+
+@mixin flex-column-center {
+    @include flex-column;
+    justify-content: center;
+}
+
+@mixin flex-column-space-between {
+    @include flex-column;
+    justify-content: space-between;
+}
+
+/* General styles */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.428;
+    font-family: $font-stack;
+    
+    #root {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    line-height: 1.428;
+}
+
+input {
+    &:focus {
+        outline: none;
+    }
+}
+
+.logo-scopio {
+    display: inline-block;
+    width: 4.5em; /* 63px */
+    height: auto;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}

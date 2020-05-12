@@ -1,0 +1,40 @@
+@import "../main.scss";
+
+.status-panel {
+    > p {
+        font-weight: bold;
+        margin-bottom: 0.8em;
+    }
+
+    .status-list {
+        overflow-y: auto;
+        max-height: 20.5em;
+        height: auto;
+        
+        .status {
+            @include flex-row-space-between;
+            width: 100%;
+            padding-top: 0.5em;
+            
+            .item-msg {
+                font-weight: 500;
+            }
+            
+            .item-status {
+                font-weight: 500;
+                
+                &.pending {
+                    color: yellow;
+                }
+                
+                &.found {
+                    color: green;
+                }
+                
+                &.not-found {
+                    color: red;
+                }
+            }
+        }
+    }
+}

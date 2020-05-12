@@ -1,0 +1,56 @@
+@import "../main.scss";
+
+.matrix-panel {
+    &.disabled {
+        .letter-matrix {
+            .row {
+                .letter {
+                    border: 2px solid #c4c4c4;
+                    background-color: #fafafa;
+                    color: #c4c4c4;
+                }
+            }
+        }
+    }
+    
+    &.enabled {
+        .letter-matrix {
+            .row {
+                .letter {
+                    border: 2px solid blue;
+                    background-color: none;
+                    color: #000000;
+                }
+            }
+        }
+    }
+    
+    .letter-matrix {
+        width: 100%;
+        height: auto;
+        display: table;
+        border-collapse: collapse;
+        
+        .row {
+            display: table-row;
+            
+            .letter {
+                display: table-cell;
+                //border: 2px solid blue;
+                font-size: 2.5em; //35px
+                height: auto;
+                text-align: center;
+                
+                &.highlight {
+                    border: 2px solid orange;
+                    background-color: rgb(252,221,188);
+                }
+                
+                &.not-found {
+                    border: 2px solid red;
+                    background-color: lightred;
+                }
+            }
+        }
+    }
+}

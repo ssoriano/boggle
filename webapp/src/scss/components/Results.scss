@@ -1,0 +1,61 @@
+@import "../main.scss";
+
+.results-panel {
+    background-color: #f7f3e9;
+    padding: 0.9em;
+    
+    .title {
+        margin-bottom: 0.4em;
+        font-size: 1.3em;
+        font-weight: 500;
+        text-align: left;
+        width: 100%;
+    }
+    
+    > p {
+        width: 100%;
+        text-align: left;
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+        
+        .bold500 {
+            font-weight: 500;
+        }
+    }
+    
+    .all-scores {
+        h3 {
+            font-size: 0.9em;
+            font-weight: 500;
+            text-decoration: underline;
+            margin: 1.2em 0 0.5em 0;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-width: 10.7em;
+            max-height: 17.3em;
+            height: auto;
+            overflow-y: auto;
+            text-align: left;
+            
+            
+            p {
+                @include flex-row-start;
+                text-align: left;
+                font-size: 0.9em;
+                
+                .player {
+                    padding-right: 1em;
+                }
+                
+                .score {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

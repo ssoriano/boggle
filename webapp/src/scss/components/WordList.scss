@@ -1,0 +1,46 @@
+@import "../main.scss";
+
+.words-panel {
+    padding: 0.9em;
+    background-color: #f7f3e9;
+    
+    .title {
+        margin-bottom: 0.4em;
+        font-size: 1.3em;
+        font-weight: 500;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .no-content {
+        font-size: 0.9em;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .word-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-width: 10.7em;
+        max-height: 20.5em;
+        height: auto;
+        overflow-y: auto;
+        text-align: left;
+        
+        p {
+            @include flex-row-start;
+            text-align: left;
+            font-size: 0.9em;
+            
+            .word {
+                padding-right: 1em;
+            }
+            
+            .score {
+                font-weight: 500;
+            }
+        }
+    }
+}

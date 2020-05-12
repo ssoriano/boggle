@@ -1,0 +1,67 @@
+@import "../main.scss";
+
+.config {
+    width: 50%;
+    
+    form {
+        display: table;
+        
+        > div {
+            
+            > * {
+                display: inline-block;
+            }
+            
+            &.form-row {
+                @include flex-row-start;
+                
+                &:first-of-type {
+                    margin-bottom: 1.7em;
+                }
+                
+                &.error-message {
+                    font-size: 0.9em;
+                    padding: 0.5em 0;
+                    color: red;
+                }
+                
+                label {
+                    padding-right: 0.5em;
+                    font-size: 1.1em;
+                    text-align: right;
+                }
+                
+                input[type=text] {
+                    font-family: $font-stack;
+                    padding: 0.3em 0.6em;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    width: 25em;
+                }
+                
+                input[type=checkbox] {
+                    width: 1.5em;
+                    height: 1.5em;
+                }
+                
+                button {
+                    padding: 0.4em 0.7em;
+                    margin-left: 2.2em;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            }
+            
+            &.explanation {
+                font-size: 0.8em;
+                margin-top: 1.7em;
+                
+                p {
+                    margin-bottom: 1em;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
